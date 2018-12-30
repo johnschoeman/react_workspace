@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import MessageList from './MessageList';
 import MessageViewer from './MessageViewer';
+import FancyButtons from './FancyButtons';
 import {EmailConsumer} from './EmailContext';
 
 const MainPage = () => (
@@ -11,6 +12,7 @@ const MainPage = () => (
       <main>
         <Header />
         {currentEmail === null ? <MessageList /> : <MessageViewer />}
+        <FancyButtons />
       </main>
     )}
   </EmailConsumer>
